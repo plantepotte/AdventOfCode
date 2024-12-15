@@ -1,0 +1,15 @@
+# ninja log v6
+11	381	7559797080641655	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+11	335	7559797282862265	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+11	330	7559798315870634	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+11	329	7559798827389030	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+11	311	7559799086343310	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+2	9	7559799733905617	clean	5dee321eee739971
+11	302	7559799773841399	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+10	297	7559799984086052	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+10	301	7559801429753042	CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj	e9c78dfd928bd1f6
+4	626	7559801429693642	CMakeFiles/AdventOfCode.dir/main.cpp.obj	9f37e83f2047d3af
+7	627	7559801429733190	CMakeFiles/AdventOfCode.dir/days/DayRunner.cpp.obj	5f12a9a32d151c8b
+627	896	7559801435924370	AdventOfCode.exe	7e530aadfb121c92
+4	596	7559801818097424	CMakeFiles/AdventOfCode.dir/main.cpp.obj	9f37e83f2047d3af
+596	687	7559801824018985	AdventOfCode.exe	7e530aadfb121c92
