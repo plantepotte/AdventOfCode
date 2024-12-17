@@ -10,6 +10,7 @@
 namespace aoc {
 
     template<typename T>
+    requires std::floating_point<T> || std::integral<T>
     T CalcListDistance(std::vector<T> A, std::vector<T> B) {
         const size_t n{std::min(A.size(), B.size())};
 

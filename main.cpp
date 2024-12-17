@@ -4,12 +4,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
     int day;
-    std::cout << "Enter the day to run: \n";
+    std::cout << "Enter the day to run:\t";
     std::cin >> day;
+    std::cout << "\n";
 
     switch (day) {
         case 1:
             aoc::day1();
+            break;
+        case 2:
+            aoc::day2();
             break;
         default:
             std::cout << "Invalid day." << "\n";

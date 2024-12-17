@@ -7,4 +7,6 @@ add_executable(AdventOfCode main.cpp
         days/DayRunner.cpp
         days/DayRunner.h
         days/DayOne.cpp
-        days/DayOne.h)
+        days/DayOne.h
+        days/DayTwo.cpp
+        days/DayTwo.h)

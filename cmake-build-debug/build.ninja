@@ -67,6 +67,12 @@ build CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj: CXX_COMPILER__AdventOfCod
   OBJECT_DIR = CMakeFiles\AdventOfCode.dir
   OBJECT_FILE_DIR = CMakeFiles\AdventOfCode.dir\days
 
+build CMakeFiles/AdventOfCode.dir/days/DayTwo.cpp.obj: CXX_COMPILER__AdventOfCode_unscanned_Debug C$:/Users/aande/Source/AdventOfCode/days/DayTwo.cpp || cmake_object_order_depends_target_AdventOfCode
+  DEP_FILE = CMakeFiles\AdventOfCode.dir\days\DayTwo.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\AdventOfCode.dir
+  OBJECT_FILE_DIR = CMakeFiles\AdventOfCode.dir\days
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AdventOfCode
@@ -75,7 +81,7 @@ build CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj: CXX_COMPILER__AdventOfCod
 #############################################
 # Link the executable AdventOfCode.exe
 
-build AdventOfCode.exe: CXX_EXECUTABLE_LINKER__AdventOfCode_Debug CMakeFiles/AdventOfCode.dir/main.cpp.obj CMakeFiles/AdventOfCode.dir/days/DayRunner.cpp.obj CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj
+build AdventOfCode.exe: CXX_EXECUTABLE_LINKER__AdventOfCode_Debug CMakeFiles/AdventOfCode.dir/main.cpp.obj CMakeFiles/AdventOfCode.dir/days/DayRunner.cpp.obj CMakeFiles/AdventOfCode.dir/days/DayOne.cpp.obj CMakeFiles/AdventOfCode.dir/days/DayTwo.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\AdventOfCode.dir
