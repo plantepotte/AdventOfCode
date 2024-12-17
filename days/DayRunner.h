@@ -8,6 +8,7 @@
 #include <vector>
 #include <filesystem>
 #include <fstream>
+#include <regex>
 
 #include "DayOne.h"
 #include "DayThree.h"
@@ -41,18 +42,29 @@ namespace aoc {
     }
 
     static void day2() {
-        const std::vector<std::vector<int>> reports = {
-            {7, 6, 4, 2, 1},
-            {1, 2, 7, 8, 9},
-            {9, 7, 6, 2, 1},
-            {1, 3, 2, 4, 5},
-            {8, 6, 4, 4, 1},
-            {1, 3, 6, 7, 9}
-        };
+        const std::filesystem::path filePath = std::filesystem::current_path() / std::filesystem::path{"../inputData/day2.txt"};
+        std::ifstream inFile{filePath};
 
-        const auto [fst, snd] = CountSafeUnsafeLevels(reports);
-        std::cout << "There are " << fst << " safe reports, and "
-                  << snd << " unsafe reports.\n";
+        if (!inFile.is_open()) {
+            // print error message and return
+            throw std::runtime_error("Failed to open file: " + filePath.string());
+        }
+
+        std::vector<std::vector<int>> reports{};
+        std::string line{};
+        while (std::getline(inFile, line)) {
+            const std::regex rgx{"([0-9]{1,})"};
+            reports.emplace_back();
+
+            for (auto numIt = std::sregex_iterator(line.begin(), line.end(), rgx); numIt != std::sregex_iterator(); ++numIt) {
+                reports.back().push_back(std::stoi(numIt->str()));
+            }
+        }
+
+        const auto numSafe = CountSafeUnsafeLevels(reports);
+        std::cout << "There are " << numSafe << " safe reports.\n";
+
+        std::cout << "There are " << CountSafeUnsafeLevels(reports, true) << " with dampen.\n";
     }
 
     static void day3() {
