@@ -15,11 +15,29 @@
 
 namespace aoc {
     static void day1() {
-        const std::vector<int> A{3,4,2,1,3,3};
-        const std::vector<int> B{4,3,5,3,9,3};
+        const std::filesystem::path filePath = std::filesystem::current_path() / std::filesystem::path{"../inputData/day1.txt"};
+        std::ifstream inFile{filePath};
+
+        if (!inFile.is_open()) {
+            // print error message and return
+            std::cout << "Failed to open file" << std::endl;
+            throw std::runtime_error("Failed to open file: " + filePath.string());
+        }
+
+        std::vector<int> A{};
+        std::vector<int> B{};
+
+        int x, y;
+        std::string line{};
+        while (inFile >> x >> y) {
+            A.push_back(x);
+            B.push_back(y);
+        }
 
         const auto dist = CalcListDistance<int>(A, B);
         std::cout << "The lists are " << dist << " apart.\n";
+
+        std::cout << "The sim-score is: " << CalculateSimilarityScore(A, B);
     }
 
     static void day2() {

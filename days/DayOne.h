@@ -6,11 +6,12 @@
 #define DAYONE_H
 #include <vector>
 #include <algorithm>
+#include <map>
 
 namespace aoc {
 
     template<typename T>
-    requires std::floating_point<T> || std::integral<T>
+    requires std::integral<T>
     T CalcListDistance(std::vector<T> A, std::vector<T> B) {
         const size_t n{std::min(A.size(), B.size())};
 
@@ -22,6 +23,26 @@ namespace aoc {
             dist += std::abs(A[i] - B[i]);
         }
         return dist;
+    }
+
+    template<typename T>
+    requires std::integral<T>
+    T CalculateSimilarityScore(const std::vector<T>& A, const std::vector<T>& B) {
+        std::map<T, size_t> counter{};
+
+        for (auto number: B) {
+            if (!counter.contains(number)) counter[number] = 0;
+            counter[number] += 1;
+        }
+
+        int sum{};
+        for (auto number: A) {
+            if (counter.contains(number)) {
+                sum += number * counter[number];
+            }
+        }
+
+        return sum;
     }
 
 } // aoc

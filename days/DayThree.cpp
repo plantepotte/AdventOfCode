@@ -59,8 +59,6 @@ namespace aoc {
                     product *= std::stoi(numIter->str());
                 }
                 sum += product;
-
-                bEnabled = true;
             }
         }
 
