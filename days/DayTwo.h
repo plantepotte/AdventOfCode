@@ -5,7 +5,6 @@
 #ifndef DAYTWO_H
 #define DAYTWO_H
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 namespace aoc {
