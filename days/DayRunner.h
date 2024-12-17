@@ -6,8 +6,11 @@
 #define DAYRUNNER_H
 #include <iostream>
 #include <vector>
+#include <filesystem>
+#include <fstream>
 
 #include "DayOne.h"
+#include "DayThree.h"
 #include "DayTwo.h"
 
 namespace aoc {
@@ -32,6 +35,26 @@ namespace aoc {
         const auto [fst, snd] = CountSafeUnsafeLevels(reports);
         std::cout << "There are " << fst << " safe reports, and "
                   << snd << " unsafe reports.\n";
+    }
+
+    static void day3() {
+        const std::filesystem::path filePath = std::filesystem::current_path() / std::filesystem::path{"../inputData/day3.txt"};
+        std::ifstream inFile{filePath};
+
+        if (!inFile.is_open()) {
+            // print error message and return
+            throw std::runtime_error("Failed to open file: " + filePath.string());
+        }
+
+        std::string input{};
+        std::string line{};
+        while (std::getline(inFile, line)) {
+            input += line;
+        }
+
+        std::cout << "The sum of the products is: " << SumProductsFromBuffer(input) << ".\n";
+
+        std::cout << "The filtered sum of products is: " << SumProductsFromBuffer(input, true);
     }
 } // aoc
 

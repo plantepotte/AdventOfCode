@@ -32,7 +32,7 @@ namespace aoc {
                     return a > b && a-b >= 1 && a-b <= 3;
                 }
                 ) == levels.end();
-            
+
             countSafe += safe;
             countUnsafe += !safe;
         }

@@ -15,6 +15,9 @@ int main() {
         case 2:
             aoc::day2();
             break;
+        case 3:
+            aoc::day3();
+            break;
         default:
             std::cout << "Invalid day." << "\n";
     }
